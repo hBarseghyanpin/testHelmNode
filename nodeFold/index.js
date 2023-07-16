@@ -8,10 +8,6 @@ app.get('/', (req, res) => {
     console.log('request made / ');
     res.send ("/");
 });
-app.get('/about', (req, res) => {
-    console.log('request made /about ');
-    res.send ("/about");
-});
 
 app.use((req, res) => {
     console.log('request made /404 ');
