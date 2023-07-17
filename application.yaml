@@ -7,12 +7,14 @@ spec:
   project: default
   source:
     repoURL: https://github.com/hBarseghyanpin/testHelmNode
-    path: nodeFold
+    path: helm
     targetRevision: main
   destination:
     server: https://kubernetes.default.svc
-    namespace: testHelmNode-namespace
+    namespace: test-helm-node-namespace
   syncPolicy:
     automated:
       prune: true
       selfHeal: true
+    syncOptions:
+    - CreateNamespace=true
